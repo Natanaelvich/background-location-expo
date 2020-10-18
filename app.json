@@ -22,7 +22,26 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+        "bundleIdentifier": "com.natanaelvich.bglocation",
+        "buildNumber": "1.0.0",
+        "supportsTablet": true
+      },
+      "android": {
+        "package": "com.natanaelvich.bglocation",
+        "versionCode": 1,
+        "enableDangerousExperimentalLeanBuilds" : true
+      },
+    "hooks": {
+        "postPublish": [
+          {
+            "file": "sentry-expo/upload-sourcemaps",
+            "config": {
+              "organization": "natanaelvich",
+              "project": "location-background",
+              "authToken": "cafbcaf2195843bd882febd142bd2e8b80842e463d7443d79be793f07ff1802d"
+            }
+          }
+        ]
+      }
   }
 }
