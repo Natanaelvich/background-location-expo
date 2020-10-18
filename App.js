@@ -5,7 +5,7 @@ import Main from './src';
 
 Sentry.init({
   dsn:
-    'https://ca841b0766b74579bac63d96a9cd4d67@o351938.ingest.sentry.io/5467848',
+    process.env.RN_DNS_SENTRY,
   enableInExpoDevelopment: true,
   debug: false,
 });
